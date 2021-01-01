@@ -1,0 +1,98 @@
+:host {
+    .chat-bubble {
+      width: auto;
+      border-radius: 10px;
+      margin: 0px;
+      display: block;
+      clear: both;
+      position: relative;
+      margin-bottom: 0px !important;
+      ion-row {
+        padding: 0px 7px !important;
+        &.selected {
+          margin-bottom: 20px;
+          .option {
+            visibility: visible;
+          }
+        }
+      }
+      .option {
+        visibility: hidden;
+        --background: #fff !important;
+        height: 30px;
+        position: absolute;
+        bottom: -17px;
+        z-index: 99999;
+      }
+      .send, .received {
+        > div {
+          video, img, audio {
+            border-radius: 10px;
+            min-width: 58% !important;
+            max-width: 98% !important;
+            margin: 1% !important;
+            background-color: transparent !important;
+          }
+        }
+      }
+    
+      .received {
+        background: #fff;
+        float: left;
+        max-width: 82%;
+        text-align: left;
+        border-radius: 10px;
+        margin-left: -15px !important;
+        margin-bottom: -5px;
+        // padding: 10px;
+        .option {
+          right: 5px;
+        }
+        p {
+          text-align: right;
+        }
+      }
+    
+      .send {
+        border-radius: 10px;
+        max-width: 80%;
+        padding: 10px;
+        background: var(--ion-color-primary);
+        color: #fff;
+        float: right;
+        text-align: right;
+        margin-top: 10px;
+        .option {
+          left: 5px;
+        }
+        p {
+          text-align: left;
+        }
+      }
+      ion-avatar {
+        height: 37px;
+        width: 37px;
+        margin-top: 5px;
+        margin-left: 5px;
+      }
+    
+      h6 {
+        margin: 0px;
+        padding: 0px;
+        margin-bottom: 20px;
+        font-weight: 400;
+      }
+    
+      p {
+        width: 95%;
+        margin: 5px auto;
+        opacity: .7;
+      }
+    
+    }
+    
+    .chat-container {
+      overflow: scroll;
+    }
+    
+  }

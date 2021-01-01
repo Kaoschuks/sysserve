@@ -107,7 +107,8 @@ body {
     --background: --ion-color-dark !important;
 }
 .bg-primary, .bg-primary * {
-    --background:  --ion-color-primary !important;
+    --background:  var(--ion-color-primary) !important;
+    background:  var(--ion-color-primary) !important;
 }
 .bg-secondary, .bg-secondary * {
     --background: --ion-color-success !important;
@@ -119,18 +120,22 @@ body {
     --background: --ion-color-danger !important;
 }
 .bg-white, .bg-white * {
-    --background: --ion-color-white !important;
+    --background: #fff !important;
+    background: #fff !important;
 }
-.bg-red-overlay, .bg-red-overlay * {
+.bg-red-overlay {
     --background: #fce8e6 !important;
+    background: #fce8e6 !important;
     color: #d93025;
 }
 .bg-primary-overlay, .bg-primary-overlay * {
     --background: #e8f0fe !important;
+    background: #e8f0fe !important;
     color: #4285f4 !important;
 }
 .bg-green-overlay, .bg-green-overlay * {
     --background: #e8f0f0 !important;
+    background: #e8f0f0 !important;
     color: #42f4a1 !important;
 }
 .bg-light-overlay, .bg-light-overlay * {

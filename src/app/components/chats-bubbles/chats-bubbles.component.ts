@@ -1,14 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { CommentsService } from 'src/app/services/comments/comments.service';
 
 @Component({
-  selector: 'app-chats-bubbles',
+  selector: 'chats-bubbles',
   templateUrl: './chats-bubbles.component.html',
   styleUrls: ['./chats-bubbles.component.scss'],
 })
 export class ChatsBubblesComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public _commentservices: CommentsService
+  ) { }
 
-  ngOnInit() {}
+  async ngOnInit() {
+    await this._commentservices.get_comments()
+  }
 
 }

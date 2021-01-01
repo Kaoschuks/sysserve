@@ -4,6 +4,7 @@
             ion-icon {
                 font-size: 25px;
                 margin-right: 17px;
+                // margin-left: -5px;
             }
             i {
                 margin-right: 10px;
@@ -11,9 +12,10 @@
             p {
                 margin-top: 0px;
             }
+            border-bottom: 1px solid var(--ion-color-light);
         }
         > ion-item {
-            margin-top: -5px;
+            margin-top: 0px;
             i {
                 margin-right: 10px;
             }

@@ -1,3 +1,41 @@
-<p>
-  chats-bubbles works!
-</p>
+
+<div *ngIf="_commentservices?.loader && _commentservices?.comments?.length == 0" align="center">
+  <br />
+  <br />
+  <ion-spinner name="dots" color="primary"></ion-spinner>
+  <p class="fs-14">Retrieving older comments</p>
+</div>
+
+
+<div class="chat-container">
+  <div class="chat-bubble animated fadeIn" *ngFor="let comment of _commentservices?.comments">
+    <ion-row class="chat-row">
+      <ion-col *ngIf="comment?.user?.username != 'Kaoschuks'" size="2">
+        <ion-avatar>
+          <img src="../../../assets/icon/avatar.jpg" />
+        </ion-avatar>
+      </ion-col>
+      <ion-col [size]="comment?.user?.username == 'Kaoschuks' ? 12 : 10 ">
+        <div [ngClass]="comment?.user?.username == 'Kaoschuks' ? 'send' : 'received' ">
+          <div *ngIf="comment?.post_type == 'photo' && comment?.files?.length > 0">
+            <img *ngFor="let file of comment?.files" [src]="file" />
+          </div>
+          <div *ngIf="comment?.post_type == 'audio' && comment?.files?.length > 0">
+            <audio *ngFor="let file of comment?.files" [src]="file" playinline controls></audio>
+          </div>
+          <div *ngIf="comment?.post_type == 'video' && comment?.files?.length > 0">
+            <video *ngFor="let file of comment?.files" [src]="file" playinline controls></video>
+          </div>
+          <h6 *ngIf="comment?.msg != ''" class="fs-14">{{comment?.msg}}</h6>
+          <p class="fs-12 bold text-muted">2 Weeks Ago</p>
+          <div class="option">
+            <ion-button size="small" class="no-shadow bg-white">Hello</ion-button>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+  <ion-spinner *ngIf="_commentservices?.loader" name="dots" color="primary"></ion-spinner>
+  <br />
+  <br />
+</div>
