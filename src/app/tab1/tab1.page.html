@@ -1,17 +1,28 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+<ion-header class="ion-no-border" [translucent]="true">
+  <ion-toolbar mode="ios" class="b-b">
+    <ion-item mode="ios" detail="false" lines="none">
+      <ion-icon name="chevron-back-outline" slot="start"></ion-icon>
+      <ion-label class="ion-text-wrap">
+        <h2 class="bold">Leaking page</h2>
+        <p>#023456789</p>
+      </ion-label>
+    </ion-item>
   </ion-toolbar>
+  <ion-item mode="ios" detail="false" lines="none">
+    <i class="ri-message-2-line ri-xl text-tertiary" slot="start"></i>
+    <ion-label class="ion-text-wrap">
+      <h2 class="fs-18 bold">Comment</h2>
+    </ion-label>
+  </ion-item>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar class="ion-no-border">
+    <add-chat></add-chat>
+  </ion-toolbar>
+</ion-footer>

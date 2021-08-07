@@ -1,0 +1,148 @@
+hr, hr * {
+    background: #ccc !important;
+    // height: 0.5px !important;
+}
+.visible-md {
+    display: none !important;
+}
+
+body {
+    -webkit-user-select: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-touch-callout: none !important;
+}
+.h-100 {
+    height: 100vh !important;
+}
+.fs-60 {
+    font-size: 60px !important;
+}
+.text-capitalize{
+    text-transform: capitalize !important;
+}
+.fs-12 {
+    font-size: 12px !important;
+}
+.fs-14 {
+    font-size: 14px !important;
+}
+.fs-16 {
+    font-size: 16px !important;
+}
+.fs-18 {
+    font-size: 18px !important;
+}
+.fs-20 {
+    font-size: 20px !important;
+}
+.fs-22 {
+    font-size: 22px !important;
+}
+.fs-50 {
+    font-size: 50px !important;
+}
+.bold {
+    font-weight: 600 !important;
+}
+.b-b {
+    border-bottom: 1px solid --ion-color-light !important;
+}
+.no-padding {
+    padding: 0px !important;
+}
+.no-shadow {
+    box-shadow: none !important;
+    --box-shadow: none !important;
+}
+.text-capitalize{
+    text-transform: capitalize !important;
+}
+.hidden {
+    display: none !important;
+}
+.bold
+{
+    font-weight: 600 !important;
+}
+.fs-18
+{
+    font-size: 18px !important;
+}
+.fs-40
+{
+    font-size: 40px !important;
+}
+.fs-30
+{
+    font-size: 30px !important;
+}
+.fs-20
+{
+    font-size: 20px !important;
+}
+.fs-25
+{
+    font-size: 25px !important;
+}
+.fs-12
+{
+    font-size: 12px !important;
+}
+.fs-10
+{
+    font-size: 10px !important;
+}
+.fs-14
+{
+    font-size: 14px !important;
+}
+.fs-16
+{
+    font-size: 16px !important;
+}
+.h-100 {
+    height: 100vh !important;
+}
+.bg-darkgray, .bg-darkgray * {
+    --background: --ion-color-dark !important;
+}
+.bg-primary, .bg-primary * {
+    --background:  --ion-color-primary !important;
+}
+.bg-secondary, .bg-secondary * {
+    --background: --ion-color-success !important;
+}
+.bg-warning, .bg-warning * {
+    --background: --ion-color-warning !important;
+}
+.bg-danger, .bg-danger * {
+    --background: --ion-color-danger !important;
+}
+.bg-white, .bg-white * {
+    --background: --ion-color-white !important;
+}
+.bg-red-overlay, .bg-red-overlay * {
+    --background: #fce8e6 !important;
+    color: #d93025;
+}
+.bg-primary-overlay, .bg-primary-overlay * {
+    --background: #e8f0fe !important;
+    color: #4285f4 !important;
+}
+.bg-green-overlay, .bg-green-overlay * {
+    --background: #e8f0f0 !important;
+    color: #42f4a1 !important;
+}
+.bg-light-overlay, .bg-light-overlay * {
+    --background: #eee !important;
+    color: #999 !important;
+}
+* ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none !important;
+}
+.text-tertiary, .text-tertiary * {
+    --color: var(--ion-color-tertiary) !important;
+    color: var(--ion-color-tertiary) !important;
+}

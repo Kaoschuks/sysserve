@@ -1,0 +1,43 @@
+
+  <div class="add-chat">
+    <ion-row *ngIf="msg != ''" class="message-content attachment b-b">
+      <ion-col size="9" offset="1" class="ion-no-padding">
+        <p class="fs-14 bold">1 Attachment</p>
+      </ion-col>
+      <ion-col size="2" align="center">
+        <i class="ri-arrow-up-s-line ri-xl text-dark" mode="ios"></i>
+      </ion-col>
+    </ion-row>
+    <ion-row class="message-content" [ngClass]="msg == '' ? 'top-border' : ''">
+      <ion-col size="1" class="icon-controls">
+        <i class="ri-emotion-line ri-xl text-dark left" mode="ios"></i>
+      </ion-col>
+      <ion-col size="10" class="ion-no-padding">
+        <ion-textarea [(ngModel)]="msg" rows="1" mode="md" autoGrow="true" placeholder="Type your comment" type="text"></ion-textarea>
+      </ion-col>
+      <ion-col size="1" class="icon-controls">
+        <i class="ri-attachment-line ri-xl text-dark right" mode="ios" (click)="openFiles()"></i>
+      </ion-col>
+    </ion-row>
+    <ion-button size="small" color="primary" class="round-btn" (click)="sendMessage()" shape="round">
+      <ion-icon *ngIf="msg != ''" mode="ios" name="send"></ion-icon>
+      <ion-icon *ngIf="msg == ''" class="fs-30" mode="ios" name="mic"></ion-icon>
+    </ion-button>
+  </div>
+
+  <ion-fab style="position: fixed; bottom: 0px" vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button size="small" (click)="toogleVisibility()" id="fileoption" color="light">
+      <ion-icon name="share"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button class="ion-no-border no-shadow" color="danger">
+        <i class="ri-volume-up-line ri-xl text-dark right" mode="ios"></i>
+      </ion-fab-button>
+      <ion-fab-button class="ion-no-border no-shadow" color="tertiary">
+        <i class="ri-image-2-line ri-xl text-dark right" mode="ios"></i>
+      </ion-fab-button>
+      <ion-fab-button class="ion-no-border no-shadow" color="success">
+        <i class="ri-file-text-line ri-xl text-dark right" mode="ios"></i>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
