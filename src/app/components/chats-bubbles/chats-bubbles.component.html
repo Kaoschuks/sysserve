@@ -7,7 +7,7 @@
 </div>
 
 
-<div class="chat-container">
+<div class="chat-container" id="chat">
   <div class="chat-bubble animated fadeIn" *ngFor="let comment of _commentservices?.comments">
     <ion-row class="chat-row">
       <ion-col *ngIf="comment?.user?.username != 'Kaoschuks'" size="2">
@@ -17,6 +17,7 @@
       </ion-col>
       <ion-col [size]="comment?.user?.username == 'Kaoschuks' ? 12 : 10 ">
         <div [ngClass]="comment?.user?.username == 'Kaoschuks' ? 'send' : 'received' ">
+          <p *ngIf="comment?.user?.username != 'Kaoschuks'" class="fs-14 text-dark username">{{comment?.user?.username}}</p>
           <div *ngIf="comment?.post_type == 'photo' && comment?.files?.length > 0">
             <img *ngFor="let file of comment?.files" [src]="file" />
           </div>

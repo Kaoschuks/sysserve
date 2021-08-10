@@ -1,5 +1,7 @@
 {
   "name": "Sysserve",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

@@ -6,9 +6,10 @@ import { Injectable } from '@angular/core';
 export class CommentsService {
 
   loader: boolean = false
-  comments: Array<any> = []
+  comments: any = []
   msg: string
-  constructor() { }
+  constructor() {
+  }
 
   async get_comments() {
     return await new Promise((resolve, reject) => {
@@ -73,6 +74,10 @@ export class CommentsService {
               ]
             },
           ]
+          setInterval(() => {
+            var elem = document.getElementById('chat');
+            elem.scrollTop = elem.scrollHeight;
+          }, 5000);
         }, 2000)
       }catch(ex) {
         this.loader = false
@@ -88,6 +93,7 @@ export class CommentsService {
       try {
         this.loader = true
         setTimeout(() => {
+          
           this.comments.push({
             "msg": message,
             "post_type": post_type,

@@ -25,6 +25,10 @@
         z-index: 99999;
       }
       .send, .received {
+        .username {
+          text-align: left;
+          margin-left: 10px;
+        }
         > div {
           video, img, audio {
             border-radius: 10px;
